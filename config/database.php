@@ -63,6 +63,48 @@ return [
             ]) : [],
         ],
 
+        // Disini di tambahkan koneksi baru
+        'bpjs_service' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_BPJS_SERVICE_HOST', '127.0.0.1'),
+            'port' => env('DB_BPJS_SERVICE_PORT', '3306'),
+            'database' => env('DB_BPJS_SERVICE_DATABASE', 'forge'),
+            'username' => env('DB_BPJS_SERVICE_USERNAME', 'forge'),
+            'password' => env('DB_BPJS_SERVICE_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
+        // Disini di tambahkan koneksi baru
+        'jadwal' => [
+            'driver' => 'mysql',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_DB_YANMED_JADWAL_HOST', '127.0.0.1'),
+            'port' => env('DB_DB_YANMED_JADWAL_PORT', '3306'),
+            'database' => env('DB_DB_YANMED_JADWAL_DATABASE', 'forge'),
+            'username' => env('DB_DB_YANMED_JADWAL_USERNAME', 'forge'),
+            'password' => env('DB_DB_YANMED_JADWAL_PASSWORD', ''),
+            'unix_socket' => env('DB_SOCKET', ''),
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
         'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
@@ -86,6 +128,32 @@ return [
             'database' => env('DB_DATABASE', 'forge'),
             'username' => env('DB_USERNAME', 'forge'),
             'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+        ],
+
+        'mysph' => [
+            'driver' => 'sqlsrv',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_WS_BPJS_HOST', 'localhost'),
+            'port' => env('DB_WS_BPJS_PORT', '1433'),
+            'database' => env('DB_WS_BPJS_DATABASE', 'forge'),
+            'username' => env('DB_WS_BPJS_USERNAME', 'forge'),
+            'password' => env('DB_WS_BPJS_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+        ],
+
+        'simrs' => [
+            'driver' => 'sqlsrv',
+            'url' => env('DATABASE_URL'),
+            'host' => env('DB_SIMRS_HOST', 'localhost'),
+            'port' => env('DB_SIMRS_PORT', '1433'),
+            'database' => env('DB_SIMRS_DATABASE', 'forge'),
+            'username' => env('DB_SIMRS_USERNAME', 'forge'),
+            'password' => env('DB_SIMRS_PASSWORD', ''),
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
