@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\WS_BPJS\BPJSController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +20,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('post_tambah', [TestController::class, 'postTambahAntrean']);
-Route::post('update_waktu', [TestController::class, 'updateWaktuAntrean']);
+/** WS BPJS Route
+ *  Digunakan untuk mengirim data antrean SPH ke BPJS
+ */
+Route::post('v2/antrean_add', [BPJSController::class, 'postTambahAntrean']);
+
+/** Section Test */
+// Route::post('post_tambah', [TestController::class, 'postTambahAntrean']);
+// Route::post('update_waktu', [TestController::class, 'updateWaktuAntrean']);

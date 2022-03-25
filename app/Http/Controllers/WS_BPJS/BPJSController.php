@@ -20,19 +20,27 @@ class BPJSController extends Controller
         return $this->bridging->postRequest($endpoint, $data);
     }
 
-    public function postUpdateWaktuAntrean(){
-
+    public function postUpdateWaktuAntrean(Request $request){
+        $data = json_encode($request->all());
+        $endpoint = 'antrean/add';
+        return $this->bridging->postRequest($endpoint, $data);
     }
 
-    public function postBatalAntrean(){
-
+    public function postBatalAntrean(Request $request){
+        $data = json_encode($request->all());
+        $endpoint = 'antrean/add';
+        return $this->bridging->postRequest($endpoint, $data);
     }
 
-    public function postListWaktuTaskId(){
-
+    public function postListWaktuTaskId(Request $request){
+        $data = json_encode($request->all());
+        $endpoint = 'antrean/add';
+        return $this->bridging->postRequest($endpoint, $data);
     }
 
-    public function postUpdateJadwalDokter(){
-
+    public function postUpdateJadwalDokter(Request $request){
+        $data = json_encode($request->all());
+        $endpoint = 'antrean/add';
+        return $this->bridging->postRequest($endpoint, $data);
     }
 }
