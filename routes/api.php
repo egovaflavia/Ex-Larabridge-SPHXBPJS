@@ -32,6 +32,7 @@ Route::post('v2/antrean_add', [BPJSController::class, 'postTambahAntrean']);
  */
 Route::post('v2/jadwal_operasi_rs', [SPHController::class, 'getJadwalOperasi']);
 Route::post('v2/jadwal_operasi_pasien', [SPHController::class, 'getJadwalOperasiPasien']);
+
 Route::post('v2/ambil_antrian', [SPHController::class, 'getAntrean']);
 
 
