@@ -23,7 +23,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
+Route::get('starter', function ()
+{
+    return view('layouts.app');
+});
 
 Route::get('sample', function() {
 	$generate = new BridgingGenerateBpjs;
